@@ -22,7 +22,7 @@ go mod download
 go mod verify
 ```
 
-# Debuggers
+# Debuggers and IDEs
 
 ## Delve
 
@@ -62,3 +62,8 @@ Then `cd` back to the project directory:
 ```
 cd -
 ```
+
+
+## Goland (IntelliJ IDEA)
+
+(A free 30-day trial is available)[https://www.jetbrains.com/go/].
