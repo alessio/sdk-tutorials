@@ -11,6 +11,10 @@ ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=NameService \
 
 BUILD_FLAGS := -ldflags '$(ldflags)'
 
+ifeq (gdb,$(findstring gdb,$(BUILD_OPTIONS)))
+  BUILD_FLAGS += -gcflags=all="-N -l"
+endif
+
 include Makefile.ledger
 all: nsd nscli
 
