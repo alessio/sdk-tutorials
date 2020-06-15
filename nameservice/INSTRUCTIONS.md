@@ -30,7 +30,7 @@ environment variable. The Right Way(c):
 export PATH=${PATH}:"$(go env GOPATH)/bin"
 ```
 
-You **don't need to set GOBIN manually** since `GOBIN` defaults to `$GOPATH/bin` if unset - (ref)[https://golang.org/cmd/go/#hdr-Compile_and_install_packages_and_dependencies].
+You **don't need to set GOBIN manually** since `GOBIN` defaults to `$GOPATH/bin` if unset - [reference](https://golang.org/cmd/go/#hdr-Compile_and_install_packages_and_dependencies).
 
 # Debuggers and IDEs
 
@@ -76,4 +76,4 @@ cd -
 
 ## Goland (IntelliJ IDEA)
 
-(A free 30-day trial is available)[https://www.jetbrains.com/go/].
+[A free 30-day trial is available](https://www.jetbrains.com/go/).
