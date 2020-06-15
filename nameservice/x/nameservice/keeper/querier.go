@@ -1,6 +1,7 @@
 package keeper
 
 import (
+	amino "github.com/tendermint/go-amino"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
@@ -40,7 +41,7 @@ func queryResolve(ctx sdk.Context, path []string, req abci.RequestQuery, keeper 
 		return []byte{}, sdkerrors.Wrap(sdkerrors.ErrUnknownRequest, "could not resolve name")
 	}
 
-	res, err := codec.MarshalJSONIndent(keeper.cdc, types.QueryResResolve{Value: value})
+	res, err := amino.MarshalBinaryBare(types.QueryResResolve{Value: value})
 	if err != nil {
 		return nil, sdkerrors.Wrap(sdkerrors.ErrJSONMarshal, err.Error())
 	}

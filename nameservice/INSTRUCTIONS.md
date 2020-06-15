@@ -32,6 +32,15 @@ export PATH=${PATH}:"$(go env GOPATH)/bin"
 
 You **don't need to set GOBIN manually** since `GOBIN` defaults to `$GOPATH/bin` if unset - [reference](https://golang.org/cmd/go/#hdr-Compile_and_install_packages_and_dependencies).
 
+# Build
+
+```
+make
+bash init.sh
+./nsd start
+./nscli rest-server --trust-node
+```
+
 # Debuggers and IDEs
 
 ## Delve
