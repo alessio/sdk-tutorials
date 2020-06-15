@@ -22,6 +22,12 @@ go mod download
 go mod verify
 ```
 
+Ensure `GOPATH/bin` is appended to the user's `PATH` environment variable. The Right Way(c):
+
+```
+export PATH=${PATH}:"$(go env GOPATH)/bin"
+```
+
 # Debuggers and IDEs
 
 ## Delve
