@@ -21,3 +21,44 @@ go mod tidy
 go mod download
 go mod verify
 ```
+
+# Debuggers
+
+## Delve
+
+### Linux
+
+Walk out the project path (e.g. `cd`) and run just:
+
+```
+go get github.com/go-delve/delve/cmd/dlv
+go get github.com/aarzilli/gdlv
+```
+
+Then `cd` back to the project directory:
+
+```
+cd -
+```
+
+### macOS
+
+
+Make sure you have the compilation tools:
+
+```
+xcode-select --install
+```
+
+Walk out the project path (e.g. `cd`) and run just:
+
+```
+go get github.com/go-delve/delve/cmd/dlv
+go get github.com/aarzilli/gdlv
+```
+
+Then `cd` back to the project directory:
+
+```
+cd -
+```
