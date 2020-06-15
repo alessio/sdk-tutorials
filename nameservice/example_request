@@ -1,6 +1,6 @@
 {
   "base_req": {
-    "from": "cosmos1hdv8nudklzq9fk9xr2uez5a3rqq2add5gamj49",
+    "from": "cosmos1rjvmpw4n2tz6l9uwwph4g493353w89cuwvpqny",
     "memo": "",
     "chain_id": "namechain",
     "account_number": "5",
@@ -15,10 +15,12 @@
     ],
     "simulate": false
   },
+  "name": "name.domain",
   "amount": [
     {
       "denom": "nametoken",
       "amount": "50"
     }
-  ]
+  ],
+  "buyer": "cosmos1rjvmpw4n2tz6l9uwwph4g493353w89cuwvpqny"
 }
