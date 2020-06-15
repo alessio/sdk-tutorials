@@ -7,12 +7,18 @@ ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=NameService \
 	-X github.com/cosmos/cosmos-sdk/version.ServerName=nsd \
 	-X github.com/cosmos/cosmos-sdk/version.ClientName=nscli \
 	-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
-	-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) 
+	-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT)
 
 BUILD_FLAGS := -ldflags '$(ldflags)'
 
 include Makefile.ledger
-all: install
+all: nsd nscli
+
+nsd:
+		go build -mod=readonly $(BUILD_FLAGS) ./cmd/nsd/
+
+nscli:
+		go build -mod=readonly $(BUILD_FLAGS) ./cmd/nscli/
 
 install: go.sum
 		@echo "--> Installing nsd & nscli"
@@ -25,3 +31,8 @@ go.sum: go.mod
 
 test:
 	@go test -mod=readonly $(PACKAGES)
+
+clean:
+	rm -f nsd nscli
+
+.PHONY: clean
