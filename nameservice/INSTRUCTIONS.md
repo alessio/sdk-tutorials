@@ -22,11 +22,15 @@ go mod download
 go mod verify
 ```
 
-Ensure `GOPATH/bin` is appended to the user's `PATH` environment variable. The Right Way(c):
+You **don't need to set GOPATH manually** since, if unset, the `go` tool sets `GOPATH`
+automatically to `$HOME/go`. Ensure `GOPATH/bin` is appended to the user's `PATH`
+environment variable. The Right Way(c):
 
 ```
 export PATH=${PATH}:"$(go env GOPATH)/bin"
 ```
+
+You **don't need to set GOBIN manually** since `GOBIN` defaults to `$GOPATH/bin` if unset - (ref)[https://golang.org/cmd/go/#hdr-Compile_and_install_packages_and_dependencies].
 
 # Debuggers and IDEs
 
