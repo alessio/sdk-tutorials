@@ -1,0 +1,24 @@
+{
+  "base_req": {
+    "from": "cosmos1hdv8nudklzq9fk9xr2uez5a3rqq2add5gamj49",
+    "memo": "",
+    "chain_id": "namechain",
+    "account_number": "5",
+    "sequence": "1",
+    "gas": "200000",
+    "gas_adjustment": "1.2",
+    "fees": [
+      {
+        "denom": "stake",
+        "amount": "50"
+      }
+    ],
+    "simulate": false
+  },
+  "amount": [
+    {
+      "denom": "nametoken",
+      "amount": "50"
+    }
+  ]
+}
