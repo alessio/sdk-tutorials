@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	amino "github.com/tendermint/go-amino"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	amino "github.com/tendermint/go-amino"
 	abci "github.com/tendermint/tendermint/abci/types"
 
 	"github.com/cosmos/sdk-tutorials/nameservice/x/nameservice/types"

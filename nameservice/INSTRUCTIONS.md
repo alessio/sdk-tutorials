@@ -83,6 +83,10 @@ cd -
 ```
 
 
+## GNU Debugger and gdbui
+
+See https://www.gdbgui.com/installation/
+
 ## Goland (IntelliJ IDEA)
 
 [A free 30-day trial is available](https://www.jetbrains.com/go/).
